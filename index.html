@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schrock Lighting</title>
 
+    <!-- Google Font: Electrolize -->
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+
     <!-- Use @font-face for custom font -->
     <style>
         @font-face {
@@ -23,6 +26,19 @@
             padding: 0;
             overflow: hidden;
         }
+        .glow-background {
+            position: absolute;
+            width: 100%;
+            height: 150px;
+            background: radial-gradient(circle at center, rgba(255,96,159,0.2) 0%, transparent 80%);
+            z-index: 1;
+        }
+        .glow-top {
+            top: 0;
+        }
+        .glow-bottom {
+            bottom: 0;
+        }
         header {
             padding: 20px;
             background: linear-gradient(to right, #20282d, #2c373d);
@@ -33,7 +49,7 @@
         #logo {
             display: block;
             margin: 0 auto;
-            max-width: 400px;
+            max-width: 1600px; /* doubled again from 800px */
         }
         h1 {
             color: #ff609f;
@@ -66,39 +82,24 @@
             position: relative;
             z-index: 3;
         }
-        .cursor-glow {
-            position: fixed;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,96,159,0.4) 0%, rgba(255,96,159,0.05) 80%, transparent 100%);
-            pointer-events: none;
-            mix-blend-mode: screen;
-            z-index: 4;
+        .highlight-text {
+            font-family: 'Electrolize', sans-serif;
         }
     </style>
 </head>
 <body>
-    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="glow-background glow-top"></div>
     <header>
         <img src="Large_Logo_White.png" alt="Schrock Lighting Logo" id="logo">
     </header>
     <div class="content">
         <h2>Intelligent Lighting Solutions</h2>
-        <p>Enhance your space with music-synced LED lighting.</p>
+        <p class="highlight-text">Enhance your space with music-synced LED lighting.</p>
         <a href="mailto:admin@schrocklighting.com" class="button">Contact Us</a>
     </div>
     <footer>
         &copy; 2025 Schrock Lighting LLC. All rights reserved.
     </footer>
-
-    <script>
-        const cursorGlow = document.getElementById('cursorGlow');
-
-        document.addEventListener('mousemove', (e) => {
-            cursorGlow.style.left = `${e.clientX - 75}px`;
-            cursorGlow.style.top = `${e.clientY - 75}px`;
-        });
-    </script>
+    <div class="glow-background glow-bottom"></div>
 </body>
 </html>
