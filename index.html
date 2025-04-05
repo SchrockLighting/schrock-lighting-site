@@ -48,7 +48,8 @@
         #logo {
             display: block;
             margin: 0 auto;
-            max-width: 90%;
+            max-width: 600px;
+            width: 100%;
             height: auto;
         }
         h1 {
@@ -86,11 +87,13 @@
         }
         .highlight-text {
             font-family: 'Electrolize', sans-serif;
+            margin: 0 auto;
+            max-width: 90%;
         }
 
         @media screen and (max-width: 768px) {
             #logo {
-                max-width: 80%;
+                max-width: 90%;
             }
             .content {
                 padding: 30px 15px;
@@ -100,17 +103,19 @@
 </head>
 <body>
     <div class="glow-background glow-top"></div>
-    <header>
-        <img src="Large_Logo_White.png" alt="Schrock Lighting Logo" id="logo">
-    </header>
-    <div class="content">
-        <h2>Intelligent Lighting Solutions</h2>
-        <p class="highlight-text">At Schrock Lighting, we’re not just designing lighting—we’re engineering immersive experiences. Our cutting-edge LED systems translate the rhythm and emotion of your music into a dynamic visual language that transforms your environment. With each beat, your space comes alive—blending light and sound into a multi-sensory connection that moves beyond hearing and straight into feeling. This is more than lighting. This is harmony, innovation, and the future of personal atmosphere control.</p>
-        <a href="mailto:admin@schrocklighting.com" class="button">Contact Us</a>
+    <div style="background-color: #06080a; position: relative; z-index: 2;">
+        <header>
+            <img src="Large_Logo_White.png" alt="Schrock Lighting Logo" id="logo">
+        </header>
+        <div class="content">
+            <h2>Intelligent Lighting Solutions</h2>
+            <p class="highlight-text">At Schrock Lighting, we’re not just designing lighting—we’re engineering immersive experiences. Our cutting-edge LED systems translate the rhythm and emotion of your music into a dynamic visual language that transforms your environment. With each beat, your space comes alive—blending light and sound into a multi-sensory connection that moves beyond hearing and straight into feeling. This is more than lighting. This is harmony, innovation, and the future of personal atmosphere control.</p>
+            <a href="mailto:admin@schrocklighting.com" class="button">Contact Us</a>
+        </div>
+        <footer>
+            &copy; 2025 Schrock Lighting LLC. All rights reserved.
+        </footer>
     </div>
-    <footer>
-        &copy; 2025 Schrock Lighting LLC. All rights reserved.
-    </footer>
     <div class="glow-background glow-bottom"></div>
 </body>
 </html>
