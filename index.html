@@ -27,11 +27,13 @@
             padding: 20px;
             background: linear-gradient(to right, #20282d, #2c373d);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 3;
         }
         #logo {
             display: block;
             margin: 0 auto;
-            max-width: 200px;
+            max-width: 400px;
         }
         h1 {
             color: #ff609f;
@@ -62,17 +64,17 @@
             font-size: 0.9em;
             color: #888;
             position: relative;
-            z-index: 2;
+            z-index: 3;
         }
         .cursor-glow {
             position: fixed;
-            width: 80px;
-            height: 80px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,96,159,0.6) 0%, rgba(255,96,159,0.1) 70%, transparent 100%);
+            background: radial-gradient(circle, rgba(255,96,159,0.4) 0%, rgba(255,96,159,0.05) 80%, transparent 100%);
             pointer-events: none;
             mix-blend-mode: screen;
-            z-index: 1;
+            z-index: 4;
         }
     </style>
 </head>
@@ -94,8 +96,8 @@
         const cursorGlow = document.getElementById('cursorGlow');
 
         document.addEventListener('mousemove', (e) => {
-            cursorGlow.style.left = `${e.clientX - 40}px`;
-            cursorGlow.style.top = `${e.clientY - 40}px`;
+            cursorGlow.style.left = `${e.clientX - 75}px`;
+            cursorGlow.style.top = `${e.clientY - 75}px`;
         });
     </script>
 </body>
